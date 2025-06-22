@@ -4,8 +4,8 @@ BingoPY is a simple project of console in Python. It simulates a normal bingo ga
 
 ## Characteristics 
 - Random number generator.
-- It controls if there are repeated numbers.
-- Simple bingo cartons (not yet)
+- The code prevents repeated numbers
+- Basic bingo cards (cooming soon)
 
 ## How to use
 ```bash
