@@ -1,13 +1,20 @@
-import random as rd
+from random import randint as rd
 import time as t
 
 repeatedNumbers = []
+carton = []
+
+def createPlayerCarton():
+
+    for i in range(6):
+        carton.append(rd(1, 100))
+    return f"Your carton is: {carton}"
 
 while len(repeatedNumbers) < 100:
-    Rnumber = rd.randint(1, 100)
+    Rnumber = rd(1, 100)
     if Rnumber not in repeatedNumbers:
         print(Rnumber)
-        t.sleep(2.5)  # Sleep for a while, it's like a delay
+        t.sleep(0.75)  
         repeatedNumbers.append(Rnumber) 
     else:
         continue
@@ -16,5 +23,5 @@ while len(repeatedNumbers) < 100:
     if input("Do you want to continue? (yes/no): ").strip().lower() != "yes":
         break
     
-print("BINGO!, thanks for playing!")
+print("thanks for playing!")
 #for now, this is the base code. I'll add more features later.
