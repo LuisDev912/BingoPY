@@ -12,14 +12,13 @@ The idea is that the carton will be shown to the player but with a best style on
 """
 
 def createPlayerCarton():
-    playerCarton = []
+    Carton = []
     
-    while len(playerCarton) < 6:
+    while len(Carton) < 6:
         num = rd(1, 100)
-        if num not in playerCarton:
-            playerCarton.append(num)
-    print(f"{playerCarton[:3]},\n{playerCarton[3:]}")  # Display the carton in two lines
-    return playerCarton
+        if num not in Carton:
+            Carton.append(num)
+    return Carton
 
 
 playerCarton = createPlayerCarton()
@@ -28,10 +27,13 @@ while len(repeatedNumbers) < 100:
     Rnumber = rd(1, 100)
     # playerCarton() 
     # I realized that I don't need to call the function again, because the playerCarton is already created.
+    print(f"{playerCarton[:3]},\n{playerCarton[3:]}")  # Display the carton in two lines
 
     if Rnumber not in repeatedNumbers:
+        print("🎱 The next number is: ", end="", flush=True)
+        t.sleep(0.75)
         print(f"☑️ {Rnumber}")
-        t.sleep(0.75)  
+        
         repeatedNumbers.append(Rnumber) 
 
         if Rnumber in playerCarton:
