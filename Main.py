@@ -33,7 +33,6 @@ while len(repeatedNumbers) < 100:
         print("🎱 The next number is: ", end="", flush=True)
         t.sleep(0.75)
         print(f"☑️ {Rnumber}")
-        
         repeatedNumbers.append(Rnumber) 
 
         if Rnumber in playerCarton:
