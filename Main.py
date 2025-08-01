@@ -26,7 +26,7 @@ playerCarton = createPlayerCarton()
 while len(repeatedNumbers) < 100:
     Rnumber = rd(1, 100)
     # playerCarton() 
-    # I realized that I don't need to call the function again, because the playerCarton is already created.
+    # I realised that I don't need to call the function again, because the playerCarton is already created.
     print(f"{playerCarton[:3]},\n{playerCarton[3:]}")  # Display the carton in two lines
 
     if Rnumber not in repeatedNumbers:
@@ -37,7 +37,7 @@ while len(repeatedNumbers) < 100:
 
         if Rnumber in playerCarton:
             print(f"💯You have a match!: {Rnumber} \n")
-            playerCarton.remove(Rnumber)
+            playerCarton.replace(str(Rnumber), "X") #there's a problem here, I need to replace the number with an "X" in the playerCarton
             t.sleep(0.90)
 
     if len(playerCarton) == 0:
