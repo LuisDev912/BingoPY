@@ -36,8 +36,8 @@ while len(repeatedNumbers) < 100:
         repeatedNumbers.append(Rnumber) 
 
         if Rnumber in playerCarton:
+            playerCarton = [x if x != Rnumber else "X" for x in playerCarton] #I used a list comprehension to replace the number with "X"
             print(f"💯You have a match!: {Rnumber} \n")
-            playerCarton.replace(str(Rnumber), "X") #there's a problem here, I need to replace the number with an "X" in the playerCarton
             t.sleep(0.90)
 
     if len(playerCarton) == 0:
