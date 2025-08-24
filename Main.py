@@ -3,13 +3,13 @@ import time as t
 
 repeatedNumbers = []
 
-"""
-The idea is that the carton will be shown to the player but with a best style on the console, like this:
---------
-[1,2,3
-,4,5,6]
---------
-"""
+
+# The idea is that the carton will be shown to the player but with a best style on the console, like this:
+# --------
+# [1,2,3
+# ,4,5,6]
+# --------
+
 
 def createPlayerCarton():
     Carton = []
@@ -43,12 +43,10 @@ while len(repeatedNumbers) < 100:
     if len(playerCarton) == 0:
         print("You have completed your carton!💯")
         break
-        
-
 
     print(f"❗all the numbers are: {sorted(repeatedNumbers)}") 
     if input("\n❓Do you want to continue? (yes/no): ").strip().lower() != "yes":
         break
-    
+
 print("thanks for playing!")
 #for now, this is the base code. I'll add more features later.
